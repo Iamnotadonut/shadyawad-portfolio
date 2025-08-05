@@ -16,6 +16,11 @@
     font-family: 'Arial', sans-serif;
 }
 
+[dir="rtl"] {
+    font-family: 'Amiri', serif;
+    text-align: right;
+}
+
 body {
     background: var(--light-bg);
     color: var(--light-text);
@@ -54,6 +59,10 @@ body.dark header {
     align-items: center;
 }
 
+[dir="rtl"] .nav-container {
+    flex-direction: row-reverse;
+}
+
 nav a {
     color: inherit;
     text-decoration: none;
@@ -61,6 +70,11 @@ nav a {
     font-weight: 500;
     position: relative;
     transition: var(--transition);
+}
+
+[dir="rtl"] nav a {
+    margin-left: 0;
+    margin-right: 20px;
 }
 
 nav a::after {
@@ -74,15 +88,30 @@ nav a::after {
     transition: width 0.3s ease;
 }
 
+[dir="rtl"] nav a::after {
+    left: auto;
+    right: 0;
+}
+
 nav a:hover::after {
     width: 100%;
+}
+
+[dir="rtl"] nav a:hover::after {
+    left: 0;
+    right: auto;
 }
 
 nav a:hover {
     color: var(--primary-green);
 }
 
-.theme-toggle {
+.header-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.theme-toggle, .language-toggle {
     background: none;
     border: none;
     cursor: pointer;
@@ -95,11 +124,19 @@ nav a:hover {
     transform: rotate(20deg);
 }
 
+.language-toggle:hover {
+    color: var(--primary-green);
+}
+
 .hero {
     text-align: center;
     padding: 100px 0;
     position: relative;
     overflow: hidden;
+}
+
+[dir="rtl"] .hero {
+    text-align: center;
 }
 
 .hero::before {
@@ -157,6 +194,10 @@ nav a:hover {
     font-size: 2.5rem;
     color: var(--primary-green);
     position: relative;
+}
+
+[dir="rtl"] .projects h2, [dir="rtl"] .about h2, [dir="rtl"] .connect h2, [dir="rtl"] .pricing h2, [dir="rtl"] .technical-details h2 {
+    text-align: center;
 }
 
 .projects h2::after, .about h2::after, .connect h2::after, .pricing h2::after, .technical-details h2::after {
@@ -220,6 +261,10 @@ body.dark .project-card {
     transition: var(--transition);
     opacity: 0;
     transform: translateY(20px);
+}
+
+[dir="rtl"] .social-link {
+    flex-direction: row-reverse;
 }
 
 .social-link.visible {
@@ -309,9 +354,20 @@ body.dark .pricing-form {
     transition: var(--transition);
 }
 
+[dir="rtl"] .form-group #complexity-value {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
 .form-group input[type="radio"],
 .form-group input[type="checkbox"] {
     margin-right: 10px;
+}
+
+[dir="rtl"] .form-group input[type="radio"],
+[dir="rtl"] .form-group input[type="checkbox"] {
+    margin-right: 0;
+    margin-left: 10px;
 }
 
 .result {
@@ -377,6 +433,9 @@ body.dark footer {
         gap: 15px;
     }
     nav a {
+        margin: 0 10px;
+    }
+    [dir="rtl"] nav a {
         margin: 0 10px;
     }
     .social-grid {

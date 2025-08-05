@@ -1,43 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shady Awad - MERN Stack Developer</title>
+    <title data-i18n="title">Shady Awad - MERN Stack Developer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="container nav-container">
             <nav>
-                <a href="#home">Home</a>
-                <a href="#projects">Projects</a>
-                <a href="#about">About</a>
-                <a href="#connect">Connect</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#technical">Technical Details</a>
+                <a href="#home" data-i18n="nav-home">Home</a>
+                <a href="#projects" data-i18n="nav-projects">Projects</a>
+                <a href="#about" data-i18n="nav-about">About</a>
+                <a href="#connect" data-i18n="nav-connect">Connect</a>
+                <a href="#pricing" data-i18n="nav-pricing">Pricing</a>
+                <a href="#technical" data-i18n="nav-technical">Technical Details</a>
             </nav>
-            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+            <div class="header-controls">
+                <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+                <button class="language-toggle" aria-label="Toggle language" data-i18n="lang-toggle">العربية</button>
+            </div>
         </div>
     </header>
 
     <section id="home" class="hero">
         <div class="container">
-            <h1>Shady Awad</h1>
-            <p>MERN Stack Developer crafting modern, scalable web applications with a passion for clean code and user-centric design.</p>
-            <a href="mailto:shady@example.com" class="cta">Get in Touch</a>
+            <h1 data-i18n="hero-title">Shady Awad</h1>
+            <p data-i18n="hero-description">MERN Stack Developer crafting modern, scalable web applications with a passion for clean code and user-centric design.</p>
+            <a href="mailto:shady@example.com" class="cta" data-i18n="hero-cta">Get in Touch</a>
         </div>
     </section>
 
     <section id="projects" class="projects">
         <div class="container">
-            <h2>Projects</h2>
+            <h2 data-i18n="projects-title">Projects</h2>
             <div class="project-grid">
                 <!-- Add your projects here -->
                 <div class="project-card">
-                    <h3>Project Name</h3>
-                    <p>Project description goes here. Describe the technologies used, challenges overcome, and key features.</p>
-                    <a href="#" class="cta">View Project</a>
+                    <h3 data-i18n="project-title">Project Name</h3>
+                    <p data-i18n="project-description">Project description goes here. Describe the technologies used, challenges overcome, and key features.</p>
+                    <a href="#" class="cta" data-i18n="project-cta">View Project</a>
                 </div>
                 <!-- Duplicate the project-card div for each project -->
             </div>
@@ -46,24 +50,24 @@
 
     <section id="about" class="about">
         <div class="container">
-            <h2>About Me</h2>
-            <p>Hi, I'm Shady Awad, a MERN stack developer with expertise in MongoDB, Express.js, React, and Node.js. I specialize in building full-stack web applications that are both performant and visually appealing. My focus is on delivering seamless user experiences through clean, maintainable code.</p>
-            <p>I enjoy tackling complex problems, optimizing performance, and staying updated with the latest web technologies. Let's build something amazing together!</p>
+            <h2 data-i18n="about-title">About Me</h2>
+            <p data-i18n="about-description-1">Hi, I'm Shady Awad, a MERN stack developer with expertise in MongoDB, Express.js, React, and Node.js. I specialize in building full-stack web applications that are both performant and visually appealing. My focus is on delivering seamless user experiences through clean, maintainable code.</p>
+            <p data-i18n="about-description-2">I enjoy tackling complex problems, optimizing performance, and staying updated with the latest web technologies. Let's build something amazing together!</p>
         </div>
     </section>
 
     <section id="connect" class="connect">
         <div class="container">
-            <h2>Connect With Me</h2>
+            <h2 data-i18n="connect-title">Connect With Me</h2>
             <div class="social-grid">
                 <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link">
-                    <span class="social-icon">🔗</span> LinkedIn
+                    <span class="social-icon">🔗</span> <span data-i18n="connect-linkedin">LinkedIn</span>
                 </a>
                 <a href="https://x.com/yourprofile" target="_blank" class="social-link">
-                    <span class="social-icon">🐦</span> Twitter/X
+                    <span class="social-icon">🐦</span> <span data-i18n="connect-twitter">Twitter/X</span>
                 </a>
                 <a href="https://github.com/yourprofile" target="_blank" class="social-link">
-                    <span class="social-icon">💻</span> GitHub
+                    <span class="social-icon">💻</span> <span data-i18n="connect-github">GitHub</span>
                 </a>
                 <!-- Add more social links here -->
             </div>
@@ -72,26 +76,26 @@
 
     <section id="pricing" class="pricing">
         <div class="container">
-            <h2>Pricing Calculator</h2>
+            <h2 data-i18n="pricing-title">Pricing Calculator</h2>
             <div class="pricing-form">
                 <div class="form-group">
-                    <label for="complexity">Project Complexity (1 = Simple, 10 = Complex)</label>
+                    <label for="complexity" data-i18n="pricing-complexity">Project Complexity (1 = Simple, 10 = Complex)</label>
                     <input type="range" id="complexity" min="1" max="10" value="1">
                     <span id="complexity-value">1</span>
                 </div>
                 <div class="form-group">
-                    <label>Include Landing Page?</label>
-                    <label><input type="radio" name="landing" value="yes"> Yes</label>
-                    <label><input type="radio" name="landing" value="no" checked> No</label>
+                    <label data-i18n="pricing-landing">Include Landing Page?</label>
+                    <label><input type="radio" name="landing" value="yes"> <span data-i18n="yes">Yes</span></label>
+                    <label><input type="radio" name="landing" value="no" checked> <span data-i18n="no">No</span></label>
                 </div>
                 <div class="form-group">
-                    <label>Additional Features</label>
-                    <label><input type="checkbox" id="hosting"> Hosting ($500/year)</label>
-                    <label><input type="checkbox" id="maintenance"> Maintenance ($1,000/year)</label>
-                    <label><input type="checkbox" id="seo"> SEO Optimization ($2,000)</label>
+                    <label data-i18n="pricing-features">Additional Features</label>
+                    <label><input type="checkbox" id="hosting"> <span data-i18n="pricing-hosting">Hosting ($500/year)</span></label>
+                    <label><input type="checkbox" id="maintenance"> <span data-i18n="pricing-maintenance">Maintenance ($1,000/year)</span></label>
+                    <label><input type="checkbox" id="seo"> <span data-i18n="pricing-seo">SEO Optimization ($2,000)</span></label>
                 </div>
                 <div class="result">
-                    <p>Estimated Cost: <span id="total-cost">$1,000</span></p>
+                    <p><span data-i18n="pricing-result">Estimated Cost</span>: <span id="total-cost">$1,000</span></p>
                 </div>
             </div>
         </div>
@@ -99,15 +103,15 @@
 
     <section id="technical" class="technical-details">
         <div class="container">
-            <h2>Technical Details</h2>
-            <p>This portfolio website is built with vanilla JavaScript, CSS, and HTML for optimal performance. It detects the user's system color scheme via prefers-color-scheme on first load, with a manual toggle that persists via localStorage.</p>
-            <p>The responsive, mobile-first design features a green theme, subtle animations (fade-ins and scale effects) via Intersection Observer, an extensible project section (duplicate the project-card div), a connect section for social profiles (LinkedIn, Twitter/X, GitHub), and a pricing calculator with a smooth slider and styled form and result boxes for estimating web development costs. No external frameworks ensure a lightweight, fast-loading site.</p>
+            <h2 data-i18n="technical-title">Technical Details</h2>
+            <p data-i18n="technical-description-1">This portfolio website is built with vanilla JavaScript, CSS, and HTML for optimal performance. It detects the user's system color scheme via prefers-color-scheme on first load and includes a manual theme toggle that persists via localStorage.</p>
+            <p data-i18n="technical-description-2">The responsive, mobile-first design incorporates a green theme, subtle animations (fade-ins and scale effects) via Intersection Observer, an extensible project section (duplicate the project-card div), a connect section for social profiles (LinkedIn, Twitter/X, GitHub), a pricing calculator with a smooth slider and styled form and result boxes, and a language selector for English and Arabic with RTL support. No external frameworks ensure a lightweight, fast-loading site.</p>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Shady Awad. All rights reserved.</p>
+            <p data-i18n="footer">&copy; 2025 Shady Awad. All rights reserved.</p>
         </div>
     </footer>
 
